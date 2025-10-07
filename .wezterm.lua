@@ -17,10 +17,10 @@ config.color_scheme = "Kanagawa Dragon (Gogh)"
 -- Colors & Appearance
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.98
 
 -- Fonts
--- config.font = wezterm.font("JetBrains Mono", { weight = "Normal" })
+config.font = wezterm.font("JetBrains Mono", { weight = "Medium" })
 config.freetype_render_target = "HorizontalLcd"
 config.window_decorations = "RESIZE"
 

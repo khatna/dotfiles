@@ -1,14 +1,11 @@
 [window]
 dynamic_padding = true
 opacity = 0.95
-# padding = { x = 8, y = 8 }
-# dimensions = { columns = 160, lines = 50 }
-# decorations = "None"
-# startup_mode = "Fullscreen"
+decorations = "None"
 
 [font]
-normal = { family = 'JetBrains Mono', style = 'Semibold' }
-size = 11
+normal = { family = 'JetBrains Mono', style = 'Medium' }
+size = 12
 
 [general]
 import = [
