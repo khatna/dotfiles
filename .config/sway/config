@@ -30,17 +30,18 @@ output * bg /usr/share/backgrounds/sway/bg.jpg fill
 #
 # Example configuration:
 #
-output DP-2 res 2560x1440@120Hz pos 0 0
-output DP-6 res 2560x1440@60Hz pos 0 0
-output DP-5 res 2560x1440@60Hz pos 2560 0
-output eDP-1 res 1920x1200 pos 1600 1440
-
-# clam shell mode
 set $laptop eDP-1
-set $work_1 DP-6
-set $work_2 DP-5
+set $work_1 DP-8
+set $work_2 DP-7
 set $home_1 DP-2
 
+
+output $home_1 res 2560x1440@120Hz pos 0 0
+output $work_1 res 2560x1440@60Hz pos 0 0
+output $work_2 res 2560x17440@60Hz pos 2560 0
+output $laptop res 3456x2160 pos 1600 1440
+
+# clam shell mode
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
@@ -222,17 +223,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    swaybar_command waybar
 }
 
 # Startup applications
